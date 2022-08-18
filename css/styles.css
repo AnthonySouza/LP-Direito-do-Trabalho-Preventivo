@@ -1,0 +1,227 @@
+*,
+*::before,
+*::after,
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: #252934;
+  background: #fafafa;
+  font-size: 62.5%;
+  font-family: "Overlock", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+a,
+a:visited {
+  color: #252934;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: 200ms;
+}
+
+a:hover,
+a:active {
+  color: #f300b4;
+}
+
+/*
+    NAV BAR
+*/
+
+nav .active {
+  background-color: #002d48;
+}
+
+#lp_navbar {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+#lp_navbar .nav_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  padding: 0 2rem;
+}
+
+#lp_navbar .nav_wrapper .edmzn_logo {
+  font-size: 1.2rem;
+  color: #fafafa;
+  cursor: default;
+}
+
+/*
+    PRIMEIRA SEÇÃO
+*/
+
+#lp_init__section {
+  background: #202736;
+  background: linear-gradient(to bottom, #002d48 0%, #001624 80%);
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+#lp_init__section::before {
+  content: "";
+  position: fixed;
+  background: url(/imgs/lp-background-azul.png);
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  z-index: -1;
+  opacity: 0;
+  animation: background-move-in 1000ms 300ms forwards;
+  -webkit-animation: background-move-in 1000ms 300ms forwards;
+}
+
+@keyframes background-move-in {
+  from {
+    background-position-y: -100px;
+  }
+  to {
+    opacity: 1;
+    background-position-y: 0;
+  }
+}
+
+#lp_init__section .lp_face__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#lp_init__section .lp_face__container {
+  position: absolute;
+  background: url(/imgs/lp-rosto-grande.png) right 100% no-repeat;
+  background-size: 100%;
+  width: 30%;
+  transform: translate(0, -75%);
+  top: 50%;
+  left: 5%;
+  opacity: 0;
+  animation: lp-face-img-move-in 1000ms 800ms forwards;
+  -webkit-animation: lp-face-img-move-in 1000ms 800ms forwards;
+}
+
+@keyframes lp-face-img-move-in {
+  from {
+    left: -100%;
+  }
+  to {
+    opacity: 1;
+    left: 5%;
+  }
+}
+
+#lp_init__section .lp_info__container {
+  /*width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;*/
+  max-width: 500px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  right: 25%;
+  opacity: 0;
+  transform: translate(0, -50%);
+  -webkit-animation: lp-info-fade-in 1000ms 800ms forwards;
+  animation: lp-info-fade-in 1000ms 800ms forwards;
+}
+
+@keyframes lp-info-fade-in {
+  from {
+    right: 0;
+  }
+  to {
+    opacity: 1;
+    right: 25%;
+  }
+}
+
+#lp_init__section .lp_info__container h1 {
+    padding-bottom: 1.5rem;
+    color: #fff;
+    line-height: 1.9rem;
+    font-weight: 100;
+}
+
+#lp_init__section .lp_info__container .lp_buttons {
+    display: flex;
+    margin-top: 1rem;
+}
+
+#lp_init__section .lp_info__container .lp_buttons .btn_more_info {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #fafafa;
+  color: #fafafa;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+#lp_init__section .lp_info__container .lp_buttons .btn_signup {
+  background: #f300b4;
+  border: 1px solid transparent;
+  color: #fafafa;
+  font-weight: bold;
+}
+
+#lp_init__section .lp_info__container .lp_buttons a,
+#lp_init__section .lp_info__container .lp_buttons a:visited {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #fafafa;
+  color: #fafafa;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+#lp_init__section .lp_info__container .lp_buttons .btn_signup a:hover,
+#lp_init__section .lp_info__container .lp_buttons .btn_signup a:active {
+  border: 1px solid #f300b4;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 100px -20px #f300b4;
+}
+
+#lp_init__section .lp_info__container .lp_buttons .btn_more_info a.cta,
+#lp_init__section .lp_info__container .lp_buttons .btn_more_info a.cta:visited {
+  background: #f300b4;
+  border: 1px solid transparent;
+  color: #fafafa;
+  font-weight: bold;
+}
+
+#lp_init__section .lp_info__container .lp_buttons .btn_signup a.cta:hover,
+#lp_init__section .lp_info__container .lp_buttons .btn_signup a.cta:active {
+  background: transparent;
+  border: 1px solid #f300b4;
+}
+
+#lp_init__section .lp_info__container .lp_buttons .btn_more_info a:first-child {
+  margin-right: 1rem;
+}
