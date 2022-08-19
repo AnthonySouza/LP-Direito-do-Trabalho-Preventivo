@@ -76,6 +76,7 @@ a:active {
 
 .nav__active {
   background: #002b48;
+  background: linear-gradient(166deg, rgba(0,43,72,1) 0%, rgba(119,60,64,1) 76%, rgb(127 94 94) 100%);
 }
 
 #lp_navbar {
@@ -115,6 +116,10 @@ a:active {
   min-height: 100vh;
   margin: 0 auto;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 #lp_init__section::before {
@@ -144,6 +149,14 @@ a:active {
 }
 
 #lp_init__section .lp_face__container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+#lp_init__section .lp_face__container .contend {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -214,6 +227,91 @@ a:active {
   max-width: 300px;
 }
 
+#lp_init__section .lp_face__container .bottom_bar_container {
+  display: block;
+  width: 100%;
+}
+
+#lp_init__section .lp_face__container .bottom_bar_container .b_contend {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+
+#lp_init__section .bottom_bar_container .lp_mzncursos_logo_barra_azul {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  position: relative;
+  background-color: #012E40;
+  background: linear-gradient(100deg, rgba(182,182,182,1) 0%, rgb(118 32 46) 71%, rgb(0 47 75 / 0%) 100%);
+  z-index: 10;
+  box-shadow: inset #004967 9px 6px 220px -7px;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.5em 0;
+  justify-content: center;
+}
+
+#lp_init__section .bottom_bar_container .lp_mzncursos_logo_barra_azul .mzn_cursos_logo {
+  max-width: 15%;
+  height: auto;
+}
+
+#lp_init__section .bottom_bar_container .lp_barra_verm_container {
+  display: block;
+  height: 100%;
+  position: relative;
+  top: -100%;
+}
+
+#lp_init__section .bottom_bar_container .lp_barra_verm_container .lp_mzncursos_logo_barra_verm {
+  height: 100%;
+  width: 20%;
+  bottom: 0;
+  text-align: center;
+  position: relative;
+  background-color: #BF1534;
+  clip-path: polygon(0 0, 100% 0, 87% 100%, 0 100%);
+  z-index: 12;
+}
+
+#lp_init__section .lp_mzncursos_barra_nome_autor {
+  height: 50px;
+    width: 40%;
+  text-align: center;
+  display: flex;
+  position: relative;
+  background-color: #BF1534;
+  background: linear-gradient(110deg, rgba(191,21,52,1) 0%, rgb(134 0 0) 100%);
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+  z-index: 10;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 4em;
+  color: #fff;
+}
+
+#lp_init__section .lp_mzncursos_barra_nome_autor .nome {
+  font-family: 'Montserrat', cursive;
+  font-size: 2.5em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+#lp_init__section .lp_mzncursos_barra_nome_autor .cv {
+  font-family: 'Montserrat', cursive;
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1;
+}
+
+
+
+
+
 /*
 #lp_init__section .lp_face__container img {
   width: fit-content;
@@ -248,26 +346,32 @@ a:active {
 #lp_sobre .section_container {
   background-color: #f2f2f2;
   color: #616161;
-  padding: 3em 5em;
+  padding: 3em 20em;
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
+}
+
+#lp_sobre .section_container .line {
+  height: 2px;
+  margin-bottom: 8em;
+  background: linear-gradient(110deg, rgba(191,21,52,0) 0%, rgb(201 0 0) 50%, rgba(93,0,0,0) 100%);
 }
 
 #lp_sobre .section_container .section_title {
   font-family: 'Montserrat', cursive;
-  font-size: 3.2em;
-  font-weight: 600;
-  color: #0d0d0d;
+  font-size: 4.2em;
+  font-weight: 500;
+  color: #BF1534;
+  text-align: center;
 }
 
 #lp_sobre .section_container .text {
   font-family: 'DM Sans', cursive;
   font-size: 2em;
-  font-weight: 100;
-  color: #252934;
+  font-weight: 600;
+  color: #26272b;
   line-height: 1.2em;
   margin-bottom: 0.4em;
   text-align: justify;
@@ -305,12 +409,12 @@ a:active {
     font-weight: 100;
 }
 
-#lp_init__section .lp_info__container .lp_buttons {
+#lp_init__section .lp_face__container .lp_buttons {
     display: flex;
     margin-top: 1rem;
 }
 
-#lp_init__section .lp_info__container .lp_buttons .btn_more_info {
+#lp_init__section .lp_face__container .lp_buttons .btn_more_info {
   width: 100%;
   padding: 1rem;
   border: 1px solid #fafafa;
@@ -322,7 +426,7 @@ a:active {
   margin: 0 10px;
 }
 
-#lp_init__section .lp_info__container .lp_buttons .btn_signup {
+#lp_init__section .lp_face__container .lp_buttons .btn_signup {
   background: #ba111e;
   border: 1px solid #ba111e66;
   border-radius: 4px;
@@ -331,8 +435,8 @@ a:active {
   margin: 0 10px;
 }
 
-#lp_init__section .lp_info__container .lp_buttons a,
-#lp_init__section .lp_info__container .lp_buttons a:visited {
+#lp_init__section .lp_face__container .lp_buttons a,
+#lp_init__section .lp_face__container .lp_buttons a:visited {
   width: 100%;
   padding: 1rem;
   border: 1px solid #fafafa;
@@ -342,31 +446,31 @@ a:active {
   font-size: 1rem;
 }
 
-#lp_init__section .lp_info__container .lp_buttons .btn_more_info:hover,
-#lp_init__section .lp_info__container .lp_buttons .btn_more_info:active,
-#lp_init__section .lp_info__container .lp_buttons .btn_signup:hover,
-#lp_init__section .lp_info__container .lp_buttons .btn_signup:active {
+#lp_init__section .lp_face__container .lp_buttons .btn_more_info:hover,
+#lp_init__section .lp_face__container .lp_buttons .btn_more_info:active,
+#lp_init__section .lp_face__container .lp_buttons .btn_signup:hover,
+#lp_init__section .lp_face__container .lp_buttons .btn_signup:active {
   border: 1px solid #ba111e;
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 14px 9px 100px -10px #ff0014;
 }
 
-#lp_init__section .lp_info__container .lp_buttons .btn_signup.cta,
-#lp_init__section .lp_info__container .lp_buttons .btn_signup.cta:visited {
+#lp_init__section .lp_face__container .lp_buttons .btn_signup.cta,
+#lp_init__section .lp_face__container .lp_buttons .btn_signup.cta:visited {
   background: #ba111e;
   border: 1px solid transparent;
   color: #fafafa;
   font-weight: bold;
 }
 
-#lp_init__section .lp_info__container .lp_buttons .btn_signup.cta:hover,
-#lp_init__section .lp_info__container .lp_buttons .btn_signup.cta:active {
+#lp_init__section .lp_face__container .lp_buttons .btn_signup.cta:hover,
+#lp_init__section .lp_face__container .lp_buttons .btn_signup.cta:active {
   background: transparent;
   border: 1px solid #ba111e;
 }
 
-#lp_init__section .lp_info__container .lp_buttons .btn_signup:first-child {
+#lp_init__section .lp_face__container .lp_buttons .btn_signup:first-child {
   margin-right: 1rem;
 }
 
@@ -413,9 +517,17 @@ min-height: 100vh;
 
 }
 
-#lp_info .event__description {
-  min-height: 100vh;
-  padding: 10% 0;
+#lp_sobre {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #f2f2f2;
+}
+
+#lp_sobre .event__description {
   display: flex;
   align-items: stretch;
   flex-direction: row;
@@ -423,14 +535,27 @@ min-height: 100vh;
   align-content: stretch;
 }
 
-#lp_info .event__description .box {
+#lp_sobre .box .container .i_icon {
+  font-size: 42px;
+  color: #fff;
+  background-color: #693315;
+  padding: 0.2em;
+  border-radius: 6px;
+}
+#lp_sobre .box .container .top_title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#lp_sobre .event__description .box {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
 
-#lp_info .event__description .box .icon span {
+#lp_sobre .event__description .box .icon span {
   font-size: 42px;
   color: #252934;
   margin-bottom: 0.6em;
@@ -441,37 +566,38 @@ min-height: 100vh;
   border-width: 1px;
 }
 
-#lp_info .event__description .box .container {
+#lp_sobre .event__description .box .container {
   display: block;
   position: relative;
   max-width: 400px;
   min-height: 100%;
   background-color: #ffffff54;
-  border-left-color: #a2a2a2;
-  border-left-style: solid;
-  border-left-width: 1px;
-  padding: 0 2em;
+  padding: 2em;
+  border-bottom: 3px #bf1534 solid;
+  border-radius: 5px;
+  box-shadow: #d4d4d4 0 0 17px 0px;
 }
 
-#lp_info .event__description .box .container:hover {
+#lp_sobre .event__description .box .container:hover {
   border-color: #002d48;
   box-shadow: #39393947 -5px -2px 16px -7px;
   transition: 200ms;
 }
 
-#lp_info .event__description .box .container .title {
+#lp_sobre .event__description .box .container .title {
   font-family: 'Montserrat', cursive;
-  font-size: 3.2em;
-  font-weight: 300;
-  color: #0d0d0d;
-  margin-bottom: 1em;
+  font-size: 2.7em;
+  font-weight: 600;
+  color: #012e40;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
-#lp_info .event__description .box .container .title .line {
+#lp_sobre .event__description .box .container .title .line {
   border-bottom: 1px #9a9a9a solid;
 }
 
-#lp_info .event__description .box .container .text {
+#lp_sobre .event__description .box .container .text {
   font-family: 'DM Sans', cursive;
   font-size: 1.8em;
   font-weight: 100;
@@ -552,7 +678,7 @@ min-height: 100vh;
 #sobre_autor {
   height: 100vh;
   width: 100%;
-  background-color: #fff;
+  background-color: #0D0D0D;
 }
 #sobre_autor .container {
   width: 100%;
@@ -560,10 +686,19 @@ min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-direction: row;
 }
 
 #sobre_autor .container .cv_container {
-  max-width: 50%;
+  max-width: 45%;
+  background-color: #012E40;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 2em;
+  border-left: #006d98 solid 8px;
 }
 
 #sobre_autor .container .title {
@@ -578,7 +713,7 @@ min-height: 100vh;
   font-family: 'Montserrat', cursive;
   font-size: 3.2em;
   font-weight: 600;
-  color: #0d0d0d;
+  color: #bf1534;
   margin-bottom: 0.4em;
 }
 
@@ -586,7 +721,7 @@ min-height: 100vh;
   font-family: 'DM Sans', cursive;
   font-size: 2em;
   font-weight: 100;
-  color: #252934;
+  color: #ffffff;
   line-height: 1.2em;
   margin-bottom: 0.4em;
   text-align: justify;
@@ -594,11 +729,78 @@ min-height: 100vh;
 
 #sobre_autor .container img {
   display: block;
-  width: 300px;
+  width: 500px;
 }
 
 #register {
   height: 100vh;
   width: 100%;
   background-color: #fff;
+}
+
+#lp_programacao {
+  height: 100vh;
+  width: 100%;
+}
+
+#lp_programacao .section_container {
+  background-color: #ffffff;
+  color: #616161;
+  padding: 3em 20em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#lp_programacao .section_container .section_title {
+  font-family: 'Montserrat', cursive;
+  font-size: 4.2em;
+  font-weight: 500;
+  color: #012E40;
+  text-align: center;
+}
+
+#lp_programacao .section_container .line {
+  height: 2px;
+  margin-bottom: 8em;
+  background: linear-gradient(110deg, rgba(191,21,52,0) 0%, #012e40 50%, rgba(93,0,0,0) 100%);
+}
+
+#lp_programacao .section_container .line_list {
+  height: 1.2px;
+    background: rgb(144,144,144);
+    background: linear-gradient(110deg, rgb(174 174 174) 0%, rgba(0,0,0,0) 100%);
+    margin-bottom: 1.6em;
+    display: none;
+}
+
+#lp_programacao .section_container .text.dest {
+  font-family: "Montserrat", sans-serif;
+  color: #2f2f2f;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 0;
+  text-align: justify;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 0.5em;
+}
+
+#lp_programacao .section_container .text.dest .space {
+  margin-right: 0.5em;
+}
+
+#lp_programacao .section_container .text {
+  font-family: 'DM Sans', cursive;
+  font-size: 2em;
+  font-weight: 100;
+  color: #26272b;
+  line-height: 1.2em;
+  margin-bottom: 0.4em;
+  text-align: justify;
+  margin-left: 2em;
 }
