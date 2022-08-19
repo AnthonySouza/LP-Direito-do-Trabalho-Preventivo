@@ -5,6 +5,34 @@
 
 @import "https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script";
 
+@font-face {
+  font-family: Coolvetica;
+  src: url(/fonts/coolvetica/coolvetica_bold.otf);
+  font-style:normal;
+  font-weight: bold;
+} 
+
+@font-face {
+  font-family: Coolvetica;
+  src: url(/fonts/coolvetica/coolvetica_bold_italic.otf);
+  font-style: italic;
+  font-weight: bold;
+} 
+
+@font-face {
+  font-family: Coolvetica;
+  src: url(/fonts/coolvetica/coolvetica_normal.otf);
+  font-style:normal;
+  font-weight: normal;
+} 
+
+@font-face {
+  font-family: Coolvetica;
+  src: url(/fonts/coolvetica/coolvetica_semibold.otf);
+  font-style:normal;
+  font-weight:700;
+} 
+
 *,
 *::before,
 *::after,
@@ -117,12 +145,76 @@ a:active {
 
 #lp_init__section .lp_face__container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
+#lp_init__section .face_fx_container .face_fx_container {
+
+}
+
+#lp_init__section .lp_face__container .face_fx_container h1 {
+  color: #ba111e;
+  font-size: 14em;
+  font-family: "Coolvetica";
+  letter-spacing: 3px;
+  line-height: 0.75em;
+  white-space: nowrap;
+	overflow: hidden;
+  animation: digitacao 1.7s steps(28, end), barra .1s step-end infinite alternate;
+	-webkit-animation: digitacao 1.7s steps(28, end), barra .1s step-end infinite alternate;
+}
+
+#lp_init__section .lp_face__container .face_fx_container h2 {
+  color: #002d48;
+  font-size: 10em;
+  font-family: "Coolvetica";
+  letter-spacing: 2px;
+  line-height: 0.75em;
+  white-space: nowrap;
+	overflow: hidden;
+  animation: digitacao 1.7s steps(28, end), barra .1s step-end infinite alternate;
+	-webkit-animation: digitacao 1.7s steps(28, end), barra .1s step-end infinite alternate;
+}
+
+#lp_init__section .lp_face__container .face_fx_container h3 {
+  color: #fff;
+  font-size: 4em;
+    font-family: "Coolvetica";
+    letter-spacing: 1px;
+    line-height: 0.75em;
+    white-space: nowrap;
+	overflow: hidden;
+  animation: digitacao 1.7s steps(28, end), barra .1s step-end infinite alternate;
+	-webkit-animation: digitacao 1.7s steps(28, end), barra .1s step-end infinite alternate;
+}
+
+#lp_init__section .lp_face__container .face_fx_container h3 .italic {
+  font-style: italic;
+  font-weight: bold;
+}
+
+#lp_init__section .lp_face__container .face_fx_container h4 {
+  font-family: 'Montserrat', cursive;
+  font-size: 3.3em;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+@keyframes digitacao { 
+  0% { width: 0; } 
+}
+@keyframes barra { 
+  50% { border-color: transparent; } 
+}
+
+#lp_init__section .lp_face__container .autora_img img {
+  max-width: 300px;
+}
+
+/*
 #lp_init__section .lp_face__container img {
   width: fit-content;
   max-width: 500px;
@@ -136,7 +228,7 @@ a:active {
   -moz-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   -o-transform: translate(0, -50%);
-}
+}*/
 
 @keyframes lp-face-img-move-in {
   from {
@@ -146,6 +238,39 @@ a:active {
     opacity: 1;
     left: 5%;
   }
+}
+
+#lp_sobre {
+  height: 100vh;
+  width: 100%;
+}
+
+#lp_sobre .section_container {
+  background-color: #f2f2f2;
+  color: #616161;
+  padding: 3em 5em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#lp_sobre .section_container .section_title {
+  font-family: 'Montserrat', cursive;
+  font-size: 3.2em;
+  font-weight: 600;
+  color: #0d0d0d;
+}
+
+#lp_sobre .section_container .text {
+  font-family: 'DM Sans', cursive;
+  font-size: 2em;
+  font-weight: 100;
+  color: #252934;
+  line-height: 1.2em;
+  margin-bottom: 0.4em;
+  text-align: justify;
 }
 
 #lp_init__section .lp_info__container {
@@ -422,4 +547,58 @@ min-height: 100vh;
   text-transform: uppercase;
   margin-left: 0;
   margin-top: 1em;
+}
+
+#sobre_autor {
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+}
+#sobre_autor .container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#sobre_autor .container .cv_container {
+  max-width: 50%;
+}
+
+#sobre_autor .container .title {
+  font-family: 'Montserrat', cursive;
+  font-size: 3.2em;
+  font-weight: 600;
+  text-align: center;
+  color: #0d0d0d;
+}
+
+#sobre_autor .container .cv_container .name {
+  font-family: 'Montserrat', cursive;
+  font-size: 3.2em;
+  font-weight: 600;
+  color: #0d0d0d;
+  margin-bottom: 0.4em;
+}
+
+#sobre_autor .container .cv_container .text {
+  font-family: 'DM Sans', cursive;
+  font-size: 2em;
+  font-weight: 100;
+  color: #252934;
+  line-height: 1.2em;
+  margin-bottom: 0.4em;
+  text-align: justify;
+}
+
+#sobre_autor .container img {
+  display: block;
+  width: 300px;
+}
+
+#register {
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
 }
