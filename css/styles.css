@@ -1,37 +1,48 @@
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 @import "https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script";
 
 @font-face {
   font-family: Coolvetica;
   src: url(/fonts/coolvetica/coolvetica_bold.otf);
-  font-style:normal;
+  font-style: normal;
   font-weight: bold;
-} 
+}
 
 @font-face {
   font-family: Coolvetica;
   src: url(/fonts/coolvetica/coolvetica_bold_italic.otf);
   font-style: italic;
   font-weight: bold;
-} 
+}
 
 @font-face {
   font-family: Coolvetica;
   src: url(/fonts/coolvetica/coolvetica_normal.otf);
-  font-style:normal;
+  font-style: normal;
   font-weight: normal;
-} 
+}
 
 @font-face {
   font-family: Coolvetica;
   src: url(/fonts/coolvetica/coolvetica_semibold.otf);
-  font-style:normal;
-  font-weight:700;
-} 
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/fonts/poppins-v20-latin-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('/fonts/poppins-v20-latin-regular.woff') format('woff'),
+    /* Modern Browsers */
+}
 
 *,
 *::before,
@@ -76,7 +87,7 @@ a:active {
 
 .nav__active {
   background: #002b48;
-  background: linear-gradient(166deg, rgba(0,43,72,1) 0%, rgba(119,60,64,1) 76%, rgb(127 94 94) 100%);
+  background: linear-gradient(166deg, rgba(0, 43, 72, 1) 0%, rgba(119, 60, 64, 1) 76%, rgb(127 94 94) 100%);
 }
 
 #lp_navbar {
@@ -142,6 +153,7 @@ a:active {
   from {
     background-position-y: -100px;
   }
+
   to {
     opacity: 1;
     background-position-y: 0;
@@ -164,9 +176,7 @@ a:active {
   justify-content: space-around;
 }
 
-#lp_init__section .face_fx_container .face_fx_container {
-
-}
+#lp_init__section .face_fx_container .face_fx_container {}
 
 #lp_init__section .lp_face__container .face_fx_container h1 {
   color: #ba111e;
@@ -175,9 +185,9 @@ a:active {
   letter-spacing: 3px;
   line-height: 0.75em;
   white-space: nowrap;
-	overflow: hidden;
+  overflow: hidden;
   animation: digitacao 1.7s steps(28, end), barra .1s step-end infinite alternate;
-	-webkit-animation: digitacao 1.7s steps(28, end), barra .1s step-end infinite alternate;
+  -webkit-animation: digitacao 1.7s steps(28, end), barra .1s step-end infinite alternate;
 }
 
 #lp_init__section .lp_face__container .face_fx_container h2 {
@@ -187,21 +197,21 @@ a:active {
   letter-spacing: 2px;
   line-height: 0.75em;
   white-space: nowrap;
-	overflow: hidden;
+  overflow: hidden;
   animation: digitacao 1.7s steps(28, end), barra .1s step-end infinite alternate;
-	-webkit-animation: digitacao 1.7s steps(28, end), barra .1s step-end infinite alternate;
+  -webkit-animation: digitacao 1.7s steps(28, end), barra .1s step-end infinite alternate;
 }
 
 #lp_init__section .lp_face__container .face_fx_container h3 {
   color: #fff;
   font-size: 4em;
-    font-family: "Coolvetica";
-    letter-spacing: 1px;
-    line-height: 0.75em;
-    white-space: nowrap;
-	overflow: hidden;
+  font-family: "Coolvetica";
+  letter-spacing: 1px;
+  line-height: 0.75em;
+  white-space: nowrap;
+  overflow: hidden;
   animation: digitacao 1.7s steps(28, end), barra .1s step-end infinite alternate;
-	-webkit-animation: digitacao 1.7s steps(28, end), barra .1s step-end infinite alternate;
+  -webkit-animation: digitacao 1.7s steps(28, end), barra .1s step-end infinite alternate;
 }
 
 #lp_init__section .lp_face__container .face_fx_container h3 .italic {
@@ -216,11 +226,16 @@ a:active {
   color: #ffffff;
 }
 
-@keyframes digitacao { 
-  0% { width: 0; } 
+@keyframes digitacao {
+  0% {
+    width: 0;
+  }
 }
-@keyframes barra { 
-  50% { border-color: transparent; } 
+
+@keyframes barra {
+  50% {
+    border-color: transparent;
+  }
 }
 
 #lp_init__section .lp_face__container .autora_img img {
@@ -245,7 +260,7 @@ a:active {
   display: flex;
   position: relative;
   background-color: #012E40;
-  background: linear-gradient(100deg, rgba(182,182,182,1) 0%, rgb(118 32 46) 71%, rgb(0 47 75 / 0%) 100%);
+  background: linear-gradient(100deg, rgba(182, 182, 182, 1) 0%, rgb(118 32 46) 71%, rgb(0 47 75 / 0%) 100%);
   z-index: 10;
   box-shadow: inset #004967 9px 6px 220px -7px;
   flex-direction: row;
@@ -279,12 +294,12 @@ a:active {
 
 #lp_init__section .lp_mzncursos_barra_nome_autor {
   height: 50px;
-    width: 40%;
+  width: 40%;
   text-align: center;
   display: flex;
   position: relative;
   background-color: #BF1534;
-  background: linear-gradient(110deg, rgba(191,21,52,1) 0%, rgb(134 0 0) 100%);
+  background: linear-gradient(110deg, rgba(191, 21, 52, 1) 0%, rgb(134 0 0) 100%);
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
   z-index: 10;
   flex-direction: column;
@@ -332,21 +347,16 @@ a:active {
   from {
     left: -100%;
   }
+
   to {
     opacity: 1;
     left: 5%;
   }
 }
 
-#lp_sobre {
-  height: 100vh;
-  width: 100%;
-}
-
 #lp_sobre .section_container {
   background-color: #f2f2f2;
   color: #616161;
-  padding: 3em 20em;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -355,8 +365,8 @@ a:active {
 
 #lp_sobre .section_container .line {
   height: 2px;
-  margin-bottom: 8em;
-  background: linear-gradient(110deg, rgba(191,21,52,0) 0%, rgb(201 0 0) 50%, rgba(93,0,0,0) 100%);
+  margin-bottom: 2em;
+  background: linear-gradient(110deg, rgba(191, 21, 52, 0) 0%, rgb(201 0 0) 50%, rgba(93, 0, 0, 0) 100%);
 }
 
 #lp_sobre .section_container .section_title {
@@ -396,6 +406,7 @@ a:active {
   from {
     right: 0;
   }
+
   to {
     opacity: 1;
     right: 25%;
@@ -403,15 +414,15 @@ a:active {
 }
 
 #lp_init__section .lp_info__container h1 {
-    padding-bottom: 1.5rem;
-    color: #fff;
-    line-height: 1.9rem;
-    font-weight: 100;
+  padding-bottom: 1.5rem;
+  color: #fff;
+  line-height: 1.9rem;
+  font-weight: 100;
 }
 
 #lp_init__section .lp_face__container .lp_buttons {
-    display: flex;
-    margin-top: 1rem;
+  display: flex;
+  margin-top: 1rem;
 }
 
 #lp_init__section .lp_face__container .lp_buttons .btn_more_info {
@@ -490,41 +501,17 @@ a:active {
 }
 
 
-/*
 
-    LP INFO SEÇÃO
-
-*/
-
-#lp_info {
-min-height: 100vh;
-    background-color: #fff;
-    z-index: 5;
-    background: url(/imgs/lp-background-cinza.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    height: 100%;
-    min-height: 100vh;
-    position: relative;
-    background: #fafafa;
-    -webkit-clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
-    clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
-    z-index: 5;
-    
-    background-attachment: fixed;
-
-}
 
 #lp_sobre {
-  height: 100vh;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   background-color: #f2f2f2;
+  padding: 5em 5%;
 }
 
 #lp_sobre .event__description {
@@ -533,15 +520,17 @@ min-height: 100vh;
   flex-direction: row;
   justify-content: space-evenly;
   align-content: stretch;
+  padding-top: 5em;
 }
 
 #lp_sobre .box .container .i_icon {
-  font-size: 42px;
+  font-size: 32px;
   color: #fff;
   background-color: #693315;
   padding: 0.2em;
   border-radius: 6px;
 }
+
 #lp_sobre .box .container .top_title {
   display: flex;
   flex-direction: column;
@@ -590,7 +579,7 @@ min-height: 100vh;
   font-weight: 600;
   color: #012e40;
   margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
 }
 
 #lp_sobre .event__description .box .container .title .line {
@@ -680,6 +669,7 @@ min-height: 100vh;
   width: 100%;
   background-color: #0D0D0D;
 }
+
 #sobre_autor .container {
   width: 100%;
   height: 100vh;
@@ -739,7 +729,7 @@ min-height: 100vh;
 }
 
 #lp_programacao {
-  height: 100vh;
+  height: auto;
   width: 100%;
 }
 
@@ -764,15 +754,15 @@ min-height: 100vh;
 #lp_programacao .section_container .line {
   height: 2px;
   margin-bottom: 8em;
-  background: linear-gradient(110deg, rgba(191,21,52,0) 0%, #012e40 50%, rgba(93,0,0,0) 100%);
+  background: linear-gradient(110deg, rgba(191, 21, 52, 0) 0%, #012e40 50%, rgba(93, 0, 0, 0) 100%);
 }
 
 #lp_programacao .section_container .line_list {
   height: 1.2px;
-    background: rgb(144,144,144);
-    background: linear-gradient(110deg, rgb(174 174 174) 0%, rgba(0,0,0,0) 100%);
-    margin-bottom: 1.6em;
-    display: none;
+  background: rgb(144, 144, 144);
+  background: linear-gradient(110deg, rgb(174 174 174) 0%, rgba(0, 0, 0, 0) 100%);
+  margin-bottom: 1.6em;
+  display: none;
 }
 
 #lp_programacao .section_container .text.dest {
@@ -803,4 +793,296 @@ min-height: 100vh;
   margin-bottom: 0.4em;
   text-align: justify;
   margin-left: 2em;
+}
+
+#lp_garantia {
+  height: 100vh;
+  width: 100%;
+  padding: 5% 10em;
+}
+
+#lp_garantia .container {
+  background-color: #FFFBE8;
+  border: 3px dashed #dcdcdc;
+  border-radius: 20px;
+  padding: 5em;
+}
+
+#lp_garantia .container .top {
+  margin-bottom: 2em;
+}
+
+#lp_garantia .container .top .contend {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#lp_garantia .container .top .contend .msg {
+  padding: 2em;
+}
+
+#lp_garantia .container .top .contend .msg .title {
+  color: #333333;
+  font-family: "Poppins", Sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+#lp_garantia .container .top .contend .msg .subtitle {
+  color: #333333;
+  font-family: "Roboto", Sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+}
+
+#lp_garantia .container .top .contend .msg .text {
+  color: #323030;
+  font-family: "Roboto", Sans-serif;
+  font-size: 18px;
+}
+
+#lp_garantia .container .top .contend .selo img {
+  width: 200px;
+}
+
+#lp_garantia .container .bottom {
+  background-color: #FCEAC5;
+  padding: 2em;
+  border-radius: 20px;
+  margin-top: 2em;
+}
+
+#lp_garantia .container .bottom .text {
+  color: #323030;
+  font-family: "Roboto", Sans-serif;
+  font-size: 18px;
+}
+
+
+/*
+
+PERGUNTAS FREQUENTES
+
+*/
+
+/*
+
+    LP INFO SEÇÃO
+
+*/
+
+.lp_info {
+  min-height: 100vh;
+  background-color: #fff;
+  padding: 10em 5%;
+}
+
+ .transition,
+ ul li span:before,
+ ul li span:after,
+ p {
+  transition: all 0.25s ease-in-out;
+}
+
+ .flipIn,
+ ul li,
+ h1 {
+  animation: flipdown 0.5s ease both;
+}
+
+
+ h2 {
+  line-height: 34px;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  color: #363636;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+ p {
+
+  font-family: 'DM Sans', cursive;
+  font-size: 1.4em;
+  font-weight: 100;
+  color: #515151;
+  line-height: 1.2em;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  max-height: 800px;
+  opacity: 1;
+  transform: translate(0, 0);
+  margin-top: 14px;
+  z-index: 2;
+}
+
+ ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+
+ ul li {
+  position: relative;
+  border: 1px solid #dce7eb;
+  padding: 1em;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+ ul li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+
+ ul li:nth-of-type(3) {
+  animation-delay: 1s;
+}
+
+ ul li:last-of-type {
+  padding-bottom: 1em;
+}
+
+ ul li  span {
+  position: relative;
+}
+
+
+ ul li input[type="checkbox"] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+
+ ul li input[type="checkbox"]:checked~p {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+
+ ul li input[type="checkbox"]:checked~span.icn::after {
+  transform: translate(-2px, 0) rotate(270deg);
+  -webkit-transform: translate(-2px, 0) rotate(270deg);
+  -moz-transform: translate(-2px, 0) rotate(270deg);
+  -ms-transform: translate(-2px, 0) rotate(270deg);
+  -o-transform: translate(-2px, 0) rotate(270deg);
+}
+
+
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  80% {
+    transform: rotateX(8deg);
+  }
+
+  83% {
+    transform: rotateX(6deg);
+  }
+
+  92% {
+    transform: rotateX(-3deg);
+  }
+
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}
+
+/*
+
+RESPONSIVIDADE
+
+*/
+
+@media only screen and (min-width: 1024) {
+  #lp_init__section>div.lp_face__container>div.contend>div.face_fx_container>img {
+    width: 350px;
+  }
+
+  #lp_init__section>div.lp_face__container>div.contend>div.autora_img>img {
+    width: 250px;
+  }
+
+  #lp_init__section>div.lp_face__container>div.bottom_bar_container>div:nth-child(1)>div>div.lp_mzncursos_barra_nome_autor>h1 {
+    font-size: 2.5em;
+  }
+
+  #lp_init__section>div.lp_face__container>div.bottom_bar_container>div:nth-child(1)>div>div.lp_mzncursos_barra_nome_autor>h2 {
+    font-size: 1.5em;
+  }
+
+  #lp_init__section>div.lp_face__container>div.bottom_bar_container>div:nth-child(1)>div>div.lp_mzncursos_barra_nome_autor {
+    width: 45%;
+  }
+
+  #lp_init__section>div.lp_face__container>div.bottom_bar_container>div:nth-child(1)>div>div.lp_mzncursos_logo_barra_azul>a>img {
+    max-width: 15%;
+  }
+
+  #sobre_autor>div>img {
+    width: 300px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #lp_init__section>div.lp_face__container>div.contend>div.face_fx_container>img {
+    width: 300px;
+  }
+
+  #lp_init__section>div.lp_face__container>div.contend>div.autora_img>img {
+    width: 200px;
+  }
+
+  #lp_init__section>div.lp_face__container>div.bottom_bar_container>div:nth-child(1)>div>div.lp_mzncursos_barra_nome_autor>h1 {
+    font-size: 1.7em;
+  }
+
+  #lp_init__section>div.lp_face__container>div.bottom_bar_container>div:nth-child(1)>div>div.lp_mzncursos_barra_nome_autor>h2 {
+    font-size: 1em;
+  }
+
+  #lp_init__section>div.lp_face__container>div.bottom_bar_container>div:nth-child(1)>div>div.lp_mzncursos_barra_nome_autor {
+    width: 40%;
+  }
+
+  #lp_init__section>div.lp_face__container>div.bottom_bar_container>div:nth-child(1)>div>div.lp_mzncursos_logo_barra_azul>a>img {
+    max-width: 12%;
+  }
+
+  #sobre_autor>div>img {
+    width: 300px !important;
+  }
 }
