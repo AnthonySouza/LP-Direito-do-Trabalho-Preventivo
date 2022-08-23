@@ -41,3 +41,14 @@ window.onscroll = () => {
     }
   }
 })();
+
+function menuBarToggleButtonClick() {
+  var x = document.getElementById("fff92");
+  if (x.className === "nav_buttons") {
+    x.className += " responsive";
+    navbar.className += " show";
+  } else {
+    x.className = "nav_buttons";
+    navbar.className = "active";
+  }
+}
