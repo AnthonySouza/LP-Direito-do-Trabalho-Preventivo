@@ -2,6 +2,12 @@ const navbar = document.querySelector("#lp_navbar");
 const header = document.querySelector("#lp_init__section");
 const top_button = document.querySelector(".btn_top");
 
+const loading_display = document.querySelector("#loading_display");
+
+window.onload = function () {
+  loading_display.style.display = "none";
+}
+
 top_button.style.visibility = "hidden";
 
 //const forest = document.querySelector(".forest");

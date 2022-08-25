@@ -3,6 +3,14 @@
 
 @import "https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script";
 
+/* ESCONDE FORMULÁRIO DA RD */
+
+#rd-box-joq3m2o0 { 
+  display: none;
+}
+
+/* AJUSTA A PÁGINA DA RD */
+
 .bricks--section>div {
   max-width: 100%;
 }
@@ -92,13 +100,20 @@ a:active {
   color: #f300b4;
 }
 
+/* LOADING DISPLAY (CARREGA UMA PÁGINA RAPIDAMENTE BRANCA PARA ESCONDER O LAYOUT DE FUNDO DA RD) */
+#loading_display {
+  z-index: 10000;
+  background-color: #001624;
+}
+
+
 /*
     NAV BAR
 */
 
 .nav__active {
   background: #002b48;
-  background: linear-gradient(166deg, rgba(0, 43, 72, 1) 0%, rgba(119, 60, 64, 1) 76%, rgb(127 94 94) 100%);
+  background: linear-gradient(166deg, rgba(0, 43, 72, 1) 0%, rgba(119, 60, 64, 1) 76%, rgb(188 0 0 / 58%) 100%);
 }
 
 #lp_navbar {
@@ -502,9 +517,9 @@ a:active {
 }
 
 #lp_init__section .lp_face__container .lp_buttons {
-  display: none;
-  /* display: flex;
-  margin-top: 1rem; */
+  /* display: none; */
+  display: flex;
+  margin-top: 1rem;
 }
 
 #lp_init__section .lp_face__container .lp_buttons .btn_more_info {
@@ -526,6 +541,12 @@ a:active {
   color: #ffdcdc;
   font-weight: bold;
   margin: 0 10px;
+}
+
+#lp_init__section .lp_face__container .lp_buttons .btn_signup.cta {
+  font-family: 'Montserrat', cursive;
+  font-weight: 400!important;
+  font-size: 2em;
 }
 
 #lp_init__section .lp_face__container .lp_buttons a,
@@ -843,6 +864,8 @@ a:active {
   flex-direction: column;
   justify-content: center;
   list-style: inside;
+  list-style: inside;
+  list-style-type: disclosure-closed;
 }
 
 #lp_programacao .section_container .section_title {
@@ -874,7 +897,7 @@ a:active {
   font-weight: 600;
   text-transform: uppercase;
   margin-left: 0;
-  text-align: justify;
+  text-align: left;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -893,7 +916,8 @@ a:active {
   color: #26272b;
   line-height: 1.4em;
   margin-bottom: 0;
-  text-align: justify;
+  text-align: left;
+  
   margin-left: 2em;
   margin-top: 0;
   display: list-item;
@@ -903,6 +927,7 @@ a:active {
   height: auto;
   width: 100%;
   padding: 5% 10em;
+  background-color: #fff!important;
 }
 
 #lp_garantia .container {
@@ -1932,7 +1957,7 @@ RESPONSIVIDADE
 }
 
 .btn_top .icon {
-  background: rgb(0 43 72);
+  background: rgb(0 117 197 / 84%);
   padding: 1em;
   border-radius: 50px;
   transform: rotate(270deg);
@@ -1953,6 +1978,8 @@ RESPONSIVIDADE
   height: auto;
   width: 100%;
   padding: 5% 25%;
+  display: flex;
+  align-items: center;
 }
 
 #buy_section .container {
@@ -1997,6 +2024,7 @@ RESPONSIVIDADE
   font-weight: 400;
   color: #363738;
   margin-bottom: 0em;
+  text-transform: inherit;
 }
 
 #buy_section .container .box .contend .parc {
