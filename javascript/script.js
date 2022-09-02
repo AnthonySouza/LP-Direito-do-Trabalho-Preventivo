@@ -58,3 +58,7 @@ function menuBarToggleButtonClick() {
     navbar.className = "active";
   }
 }
+
+//ADICIONA O ICONE DA PAGINA
+head.innerHTML = '<link  rel="icon" type="image/png" href="https://d335luupugsy2.cloudfront.net/cms/files/94431/1662124200/$lmu74l8051">'
+'<link  rel="icon" type="image/png" href="https://d335luupugsy2.cloudfront.net/cms/files/94431/1662124200/$lmu74l8051">'
